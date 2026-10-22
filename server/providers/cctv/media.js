@@ -468,7 +468,7 @@ export async function fetchTxdotSnapshot(
     const upstream = await fetchImpl(parsed.toString(), {
       headers: {
         Accept: 'application/json',
-        'User-Agent': 'gods-eye-view-cctv-proxy/1.0',
+        'User-Agent': 'hosris-cctv-proxy/1.0',
       },
       signal: controller.signal,
       redirect: 'manual',
@@ -612,10 +612,10 @@ export function cctvUpstreamUserAgent(url) {
   try {
     return (
       CCTV_IMAGE_USER_AGENT_BY_HOST[new URL(url).hostname] ||
-      'gods-eye-view-cctv-proxy/1.0'
+      'hosris-cctv-proxy/1.0'
     );
   } catch {
-    return 'gods-eye-view-cctv-proxy/1.0';
+    return 'hosris-cctv-proxy/1.0';
   }
 }
 

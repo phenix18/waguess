@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { promises as fsp } from 'node:fs';
-import { terrainHeightsProxy } from 'gods-eye-view/server/providers/terrain';
-import { tomtomProxy } from 'gods-eye-view/server/providers/traffic';
-import { firmsProxy } from 'gods-eye-view/server/providers/firms';
-import { gbfsProxy } from 'gods-eye-view/server/providers/gbfs';
+import { terrainHeightsProxy } from 'hosris/server/providers/terrain';
+import { tomtomProxy } from 'hosris/server/providers/traffic';
+import { firmsProxy } from 'hosris/server/providers/firms';
+import { gbfsProxy } from 'hosris/server/providers/gbfs';
 import { localProviderPlugins } from '../../server/providers/local.js';
 
 function install(plugin, hook = 'configureServer') {

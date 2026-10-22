@@ -1,6 +1,6 @@
 # OpenSky Auth Setup
 
-God's Eye View uses explicit auth modes for `/api/flights`:
+HOSRIS uses explicit auth modes for `/api/flights`:
 
 - `OPENSKY_AUTH_MODE=oauth` (default, recommended)
 - `OPENSKY_AUTH_MODE=auto` (OAuth first, then Basic fallback)

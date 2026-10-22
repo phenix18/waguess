@@ -1,18 +1,18 @@
 {
-  "name": "gods-eye-view",
+  "name": "hosris",
   "private": true,
   "version": "0.2.1",
   "description": "A real-time intelligence console for planet Earth — photorealistic 3D globe, live aircraft/ships/satellites/earthquakes/CCTV, and hands-free voice control. Runs in a browser.",
   "type": "module",
   "license": "MIT",
-  "author": "Bilawal Sidhu",
-  "homepage": "https://github.com/bilawalsidhu/gods-eye-view#readme",
+  "author": "Fido-Labs (derived from God's Eye View by Bilawal Sidhu)",
+  "homepage": "https://github.com/phenix18/hosris#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bilawalsidhu/gods-eye-view.git"
+    "url": "https://github.com/phenix18/hosris.git"
   },
   "bugs": {
-    "url": "https://github.com/bilawalsidhu/gods-eye-view/issues"
+    "url": "https://github.com/phenix18/hosris/issues"
   },
   "engines": {
     "node": ">=24.14.0 <25 || >=26 <27"

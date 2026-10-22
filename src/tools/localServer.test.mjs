@@ -65,7 +65,7 @@ test('the stdio server answers newline-delimited requests using only its data so
     .map((line) => JSON.parse(line));
   const byId = new Map(responses.map((response) => [response.id, response]));
   assert.equal(responses.length, 4);
-  assert.equal(byId.get(1).result.serverInfo.name, 'gods-eye-view');
+  assert.equal(byId.get(1).result.serverInfo.name, 'hosris');
   assert.equal(byId.get(null).error.code, -32700);
   // Every Core tool's services are composed locally.
   assert.deepEqual(
@@ -152,7 +152,7 @@ test("only the key in the server's own panel page opens panel requests", async (
     jsonrpc: '2.0',
     id: 1,
     method: 'resources/read',
-    params: { uri: 'ui://gods-eye-view/globe' },
+    params: { uri: 'ui://hosris/globe' },
   });
   const [, key] = page.result.contents[0].text.match(/"panelKey":"([^"]+)"/);
   assert.ok(key.length >= 40);
@@ -167,7 +167,7 @@ test("only the key in the server's own panel page opens panel requests", async (
     jsonrpc: '2.0',
     id: 4,
     method: 'resources/read',
-    params: { uri: 'ui://gods-eye-view/globe' },
+    params: { uri: 'ui://hosris/globe' },
   });
   assert.doesNotMatch(otherPage.result.contents[0].text, new RegExp(key));
 });
