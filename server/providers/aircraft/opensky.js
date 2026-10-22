@@ -329,7 +329,7 @@ async function fetchAdsbLolPointFallback(req) {
           {
             headers: {
               Accept: 'application/json',
-              'User-Agent': 'hosris-adsblol-regional-fallback/1.0',
+              'User-Agent': 'waguess-adsblol-regional-fallback/1.0',
             },
             signal: controller.signal,
           },

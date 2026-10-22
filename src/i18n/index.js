@@ -1,4 +1,4 @@
-// HOSRIS i18n: the English source text is the message key.
+// WAGUESS i18n: the English source text is the message key.
 //
 //   t('Save keys')                                   → 'Сохранить ключи'
 //   t('Cleared {name}', { name })                    → named interpolation
@@ -18,8 +18,9 @@ import {
 } from './locale.js';
 import es from './locales/es.json' with { type: 'json' };
 import ru from './locales/ru.json' with { type: 'json' };
+import fr from './locales/fr.json' with { type: 'json' };
 
-const CATALOGS = Object.freeze({ es, ru });
+const CATALOGS = Object.freeze({ es, ru, fr });
 
 let currentLocale = DEFAULT_LOCALE;
 

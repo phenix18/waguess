@@ -117,7 +117,7 @@ export function cctvProxy({ sourceRoot = process.cwd() } = {}) {
       sv.searchParams.set('key', streetViewKey);
 
       const svResp = await fetch(sv.toString(), {
-        headers: { 'User-Agent': 'hosris-cctv-proxy/1.0' },
+        headers: { 'User-Agent': 'waguess-cctv-proxy/1.0' },
         signal: AbortSignal.timeout(CCTV_FRAME_FETCH_TIMEOUT_MS),
       });
       const svType = cctvRasterImageType(svResp.headers.get('content-type'));
@@ -378,7 +378,7 @@ export function cctvProxy({ sourceRoot = process.cwd() } = {}) {
           const downstream = watchDownstreamClose(res);
           try {
             const upstreamHeaders = {
-              'User-Agent': 'hosris-cctv-proxy/1.0',
+              'User-Agent': 'waguess-cctv-proxy/1.0',
             };
             // Never forward the client's own string: a Range this proxy does
             // not accept is dropped and the request proceeds without one.

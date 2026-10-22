@@ -1,12 +1,12 @@
 /**
- * The HOSRIS panel: an MCP Apps view (`io.modelcontextprotocol/ui`) that shows
- * HOSRIS inside a conversation. The panel is a small page that runs
+ * The WAGUESS panel: an MCP Apps view (`io.modelcontextprotocol/ui`) that shows
+ * WAGUESS inside a conversation. The panel is a small page that runs
  * the app's panel build inside itself in embed mode, loading it through the
- * MCP server, and sends it each view the show_in_gods_eye_view tool returns;
+ * MCP server, and sends it each view the show_in_waguess tool returns;
  * see docs/TOOLS.md.
  */
 
-export const GLOBE_PANEL_URI = 'ui://hosris/globe';
+export const GLOBE_PANEL_URI = 'ui://waguess/globe';
 /** Where the app's server serves its panel build (see build/panel.js). */
 export const PANEL_BASE = '/panel/';
 /** The script the panel runs ahead of Cesium's workers, in the build. */
@@ -68,12 +68,12 @@ const LOAD_TIMEOUT_MS = 90_000;
  * (the page's own may use a host's scheme). The panel loads its paths
  * through the MCP server; the name never resolves.
  */
-const PANEL_APP_BASE_URL = 'https://app.hosris.invalid/';
+const PANEL_APP_BASE_URL = 'https://app.waguess.invalid/';
 /** The panel-only tool the panel loads the app through. */
 export const PANEL_REQUEST_TOOL = 'panel_request';
 
 /**
- * The panel page: its status line, the Open in HOSRIS button, and
+ * The panel page: its status line, the Open in WAGUESS button, and
  * the panel's script, `runtime`, which loads the app through the MCP server
  * and shows each view a tool returns.
  */
@@ -96,7 +96,7 @@ function panelHtml(runtime, panelKey) {
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>HOSRIS</title>
+<title>WAGUESS</title>
 <style>
   html, body { margin: 0; height: 100%; min-height: ${PANEL_HEIGHT_PX}px; background: #05070a;
     color: #b8c4cc; font: 13px/1.4 system-ui, sans-serif; overflow: hidden; }
@@ -112,7 +112,7 @@ function panelHtml(runtime, panelKey) {
 <div id="status">Waiting for a view…</div>
 <div id="actions">
 <button id="expand" type="button" hidden>Expand</button>
-<button id="open" type="button" hidden>Open in HOSRIS</button>
+<button id="open" type="button" hidden>Open in WAGUESS</button>
 </div>
 <script>${script}</script>
 </body>
@@ -137,8 +137,8 @@ export function createGlobePanelResource({ runtime, panelKey }) {
   return Object.freeze({
     uri: GLOBE_PANEL_URI,
     name: 'globe',
-    title: "HOSRIS globe",
-    description: "Live HOSRIS, showing the view a tool returns.",
+    title: "WAGUESS globe",
+    description: "Live WAGUESS, showing the view a tool returns.",
     mimeType: MCP_APP_MIME_TYPE,
     text: panelHtml(runtime, panelKey),
     _meta: {

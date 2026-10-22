@@ -1,0 +1,210 @@
+/* WAGUESS Operations: launcher + panel. Sits bottom-left, clear of the dock. */
+.ops-launcher {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 40;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(14, 18, 24, 0.85);
+  color: #e8eef5;
+  font:
+    600 12px/1 system-ui,
+    sans-serif;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+.ops-launcher:focus-visible,
+.ops-panel button:focus-visible {
+  outline: 2px solid #4fc3f7;
+  outline-offset: 2px;
+}
+.ops-launcher.ops-pulse {
+  animation: ops-pulse 1.2s ease-in-out infinite;
+  border-color: #ff5252;
+}
+@keyframes ops-pulse {
+  50% {
+    box-shadow: 0 0 0 6px rgba(255, 82, 82, 0.35);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ops-launcher.ops-pulse {
+    animation: none;
+  }
+}
+.ops-badge {
+  margin-left: 6px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #ff5252;
+  color: #fff;
+  font-size: 10px;
+}
+.ops-badge[hidden],
+.ops-panel[hidden],
+.ops-body[hidden] {
+  display: none;
+}
+.ops-panel {
+  position: fixed;
+  left: 12px;
+  bottom: 56px;
+  z-index: 40;
+  width: min(380px, calc(100vw - 24px));
+  max-height: min(70vh, 560px);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(14, 18, 24, 0.94);
+  color: #e8eef5;
+  font:
+    13px/1.4 system-ui,
+    sans-serif;
+  backdrop-filter: blur(10px);
+}
+.ops-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px 4px;
+}
+.ops-close {
+  background: none;
+  border: 0;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
+.ops-tabs {
+  display: flex;
+  gap: 2px;
+  padding: 0 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.ops-tab {
+  padding: 8px 10px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: #a8b4c2;
+  cursor: pointer;
+}
+.ops-tab[aria-selected='true'] {
+  color: #fff;
+  border-bottom-color: #4fc3f7;
+}
+.ops-body {
+  padding: 10px 12px 12px;
+  overflow-y: auto;
+}
+.ops-body h3 {
+  margin: 12px 0 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #a8b4c2;
+}
+.ops-row,
+.ops-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin: 6px 0;
+}
+.ops-row input[type='text'] {
+  flex: 1;
+  min-width: 0;
+}
+.ops-panel input[type='text'],
+.ops-panel select,
+.ops-panel button {
+  padding: 6px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  color: inherit;
+  font: inherit;
+}
+.ops-panel button {
+  cursor: pointer;
+}
+.ops-hint,
+.ops-status {
+  margin: 6px 0;
+  color: #a8b4c2;
+}
+.ops-status {
+  color: #e8eef5;
+}
+.ops-link {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  word-break: break-all;
+}
+.ops-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 8px 0;
+  padding: 0;
+  list-style: none;
+}
+.ops-legend i,
+.ops-road i {
+  display: inline-block;
+  width: 18px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+.ops-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ops-list > li {
+  display: grid;
+  gap: 2px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.ops-list small,
+.ops-time {
+  color: #a8b4c2;
+}
+.ops-alert.sev-critical {
+  border-left: 3px solid #ff5252;
+  padding-left: 8px;
+}
+.ops-alert.sev-warning {
+  border-left: 3px solid #ffb300;
+  padding-left: 8px;
+}
+.ops-empty {
+  color: #a8b4c2;
+}
+.ops-preview {
+  max-height: 220px;
+  overflow: auto;
+  padding: 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  white-space: pre-wrap;
+  font:
+    12px/1.45 ui-monospace,
+    monospace;
+}
+@media (max-width: 520px) {
+  .ops-panel {
+    bottom: 52px;
+    max-height: 60vh;
+  }
+}

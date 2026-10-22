@@ -1,6 +1,6 @@
-# Translating HOSRIS
+# Translating WAGUESS
 
-Shipped languages: **English** (source and fallback), **Spanish** (`es`) and **Russian** (`ru`).
+Shipped languages: **English** (source and fallback), **Spanish** (`es`), **Russian** (`ru`) and **French** (`fr`).
 
 ## How it works
 
@@ -63,4 +63,4 @@ These are contracts, not copy: layer ids and registry keys, status enums and oth
 
 ## Language notes
 
-Each language keeps its glossary, plural forms, units and style in its own file, `docs/translations/<code>.md`: [Spanish](./translations/es.md), [Russian](./translations/ru.md). Read it before translating, and add a term there when you settle on one.
+Each language keeps its glossary, plural forms, units and style in its own file, `docs/translations/<code>.md`: [Spanish](./translations/es.md), [Russian](./translations/ru.md), [French](./translations/fr.md). Read it before translating, and add a term there when you settle on one.

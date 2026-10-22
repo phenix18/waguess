@@ -1,4 +1,4 @@
-/** Links that open HOSRIS at a view. */
+/** Links that open WAGUESS at a view. */
 
 import { VIEW_PROPERTIES, createView, viewUrl } from '../../view/index.js';
 import { defineTool, ToolError } from '../catalog.js';
@@ -104,12 +104,12 @@ function appBase(services) {
   }
 }
 
-export const showInGodsEyeView = defineTool({
-  name: 'show_in_gods_eye_view',
-  title: "Show in HOSRIS",
+export const showInWaguess = defineTool({
+  name: 'show_in_waguess',
+  title: "Show in WAGUESS",
   description:
-    "Shows a view in HOSRIS: in clients that display apps, the live " +
-    "HOSRIS globe in the conversation; everywhere, a link that opens " +
+    "Shows a view in WAGUESS: in clients that display apps, the live " +
+    "WAGUESS globe in the conversation; everywhere, a link that opens " +
     'it. Pass the view another answer returned, or describe one: an area ' +
     'framed from above or a camera position, with chosen data layers, visual ' +
     'style and map, optionally following an aircraft (or riding in its ' +
@@ -130,7 +130,7 @@ export const showInGodsEyeView = defineTool({
     });
     const url = viewUrl(base, view);
     return {
-      summary: `Open ${label} in HOSRIS: ${url}`,
+      summary: `Open ${label} in WAGUESS: ${url}`,
       data: { url, view },
     };
   },

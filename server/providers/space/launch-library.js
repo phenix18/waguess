@@ -14,7 +14,7 @@ export function launchLibraryRequestHeaders(token = process.env.LL2_API_TOKEN) {
   return {
     Accept: 'application/json',
     'User-Agent':
-      'hosris-launch-library-proxy/1.0 (+https://github.com/bilawalsidhu/gods-eye-view)',
+      'waguess-launch-library-proxy/1.0 (+https://github.com/bilawalsidhu/gods-eye-view)',
     ...(normalized ? { Authorization: `Token ${normalized}` } : {}),
   };
 }

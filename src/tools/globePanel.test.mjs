@@ -89,12 +89,12 @@ test('the globe panel needs a request key', () => {
     );
 });
 
-test('show_in_gods_eye_view names the panel and shows a view another answer returned', async () => {
+test('show_in_waguess names the panel and shows a view another answer returned', async () => {
   const catalog = composeCatalog({
     tools: coreTools,
     services: { app: { baseUrl: 'http://localhost:5173/' } },
   });
-  assert.deepEqual(catalog.get('show_in_gods_eye_view').ui, {
+  assert.deepEqual(catalog.get('show_in_waguess').ui, {
     resourceUri: GLOBE_PANEL_URI,
   });
   const earlier = {
@@ -112,7 +112,7 @@ test('show_in_gods_eye_view names the panel and shows a view another answer retu
     annotations: [],
     url: 'http://localhost:5173/#v=2',
   };
-  const shown = await catalog.call('show_in_gods_eye_view', {
+  const shown = await catalog.call('show_in_waguess', {
     view: earlier,
     layers: ['ais-live-vessels', 'military'],
     style: 'thermal',
@@ -121,7 +121,7 @@ test('show_in_gods_eye_view names the panel and shows a view another answer retu
   assert.deepEqual(shown.data.view.layers, ['ais-live-vessels', 'military']);
   assert.equal(shown.data.view.style, 'thermal');
   await assert.rejects(
-    catalog.call('show_in_gods_eye_view', { view: { camera: { lat: 'x' } } }),
+    catalog.call('show_in_waguess', { view: { camera: { lat: 'x' } } }),
     (error) => error.code === 'invalid_arguments',
   );
 });
@@ -160,7 +160,7 @@ test('a view that only follows an aircraft is framed where the aircraft is', asy
 });
 
 test('the package exports the panel resource and its runtime together', async () => {
-  const panel = await import('hosris/tools/panel');
+  const panel = await import('waguess/tools/panel');
   const resource = panel.createGlobePanelResource({
     runtime: panel.panelRuntime,
     panelKey: 'key',

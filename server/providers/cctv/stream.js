@@ -36,7 +36,7 @@ export async function fetchHlsBytes(
     response = await fetchImpl(url, {
       redirect: 'error',
       signal: controller.signal,
-      headers: { 'User-Agent': 'hosris-cctv-proxy/1.0' },
+      headers: { 'User-Agent': 'waguess-cctv-proxy/1.0' },
     });
     if (
       !response.ok ||

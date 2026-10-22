@@ -6,7 +6,7 @@ import { createHash } from 'node:crypto';
 // ---------------------------------------------------------------------------
 /** Stable application identity for operator-configured Overpass instances. */
 const OVERPASS_USER_AGENT =
-  'hosris/0.1 (+https://github.com/bilawalsidhu/gods-eye-view)';
+  'waguess/0.1 (+https://github.com/bilawalsidhu/gods-eye-view)';
 
 /** Parse only operator-supplied HTTP(S) endpoints; private instances are allowed. */
 function parseOverpassUpstreams(raw) {

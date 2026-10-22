@@ -86,7 +86,7 @@ export function keepPanelRendering(
     (_scene, error) => {
       failed = true;
       console.error(
-        "[HOSRIS panel] render error:",
+        "[WAGUESS panel] render error:",
         describeError(error),
       );
     },

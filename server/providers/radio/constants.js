@@ -8,8 +8,7 @@ export const RADIO_CATALOG_MIN_SUCCESSFUL_QUERIES = 5;
 export const RADIO_CATALOG_HEALTHY_MIN_STATIONS = Math.ceil(
   RADIO_DIRECTORY_LIMIT / 2,
 );
-export const RADIO_USER_AGENT =
-  'GodsEyeView/1.0 (Radio Browser directory client)';
+export const RADIO_USER_AGENT = 'Waguess/1.0 (Radio Browser directory client)';
 export { RADIO_UUID_RE } from '../../../src/sources/radioBrowser.js';
 export const RADIO_FALLBACK_MIRRORS = Object.freeze([
   'https://de1.api.radio-browser.info',

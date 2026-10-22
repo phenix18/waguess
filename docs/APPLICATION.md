@@ -1,6 +1,6 @@
 # Application construction
 
-`hosris/application` exports `createApplication`. Importing it does not
+`waguess/application` exports `createApplication`. Importing it does not
 create a viewer, discover configuration, start requests, or attach browser
 listeners. Construction is also inactive until the caller invokes `start()`.
 
@@ -20,8 +20,8 @@ interpret provider names, environment variables, endpoints, or module paths.
 There is no module discovery or automatic import mechanism.
 
 ```js
-import { createApplication } from 'hosris/application';
-import { createApplicationViewer } from 'hosris/application/viewer';
+import { createApplication } from 'waguess/application';
+import { createApplicationViewer } from 'waguess/application/viewer';
 
 const app = createApplication({
   createScene({ defer }) {

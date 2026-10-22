@@ -2,8 +2,9 @@ import { createAssetDirectorySource } from '../director/packs/source.js';
 import { createApplicationTools } from '../app/tools.js';
 import { startStandaloneChrome } from './startupChrome.js';
 import { loadToolCatalog } from './toolCatalog.js';
+import { mountOperations } from '../ops/index.js';
 export function createStandaloneTools(options) {
-  return createApplicationTools({
+  const tools = createApplicationTools({
     startChrome: startStandaloneChrome,
     sceneDataPacks: {
       sources: {
@@ -23,4 +24,14 @@ export function createStandaloneTools(options) {
       ...options?.voice,
     },
   });
+  // Operations (road saturation, alert journal, report): self-contained and
+  // non-fatal, so a storage or overlay failure never blocks the globe.
+  mountOperations({
+    viewer: options.scene.viewer,
+    dataManager: options.data?.dataManager,
+    placeSearch: options.placeSearch,
+    signal: options.signal,
+    defer: options.defer,
+  }).catch((error) => console.warn('[WAGUESS ops]', error));
+  return tools;
 }

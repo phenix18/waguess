@@ -1,14 +1,14 @@
-# Contributing to HOSRIS
+# Contributing to WAGUESS
 
-Thanks for being here. HOSRIS is an open foundation for live spatial intelligence in the browser, and it gets better when more people run it, break it, and extend it.
+Thanks for being here. WAGUESS is an open foundation for live spatial intelligence in the browser, and it gets better when more people run it, break it, and extend it.
 
 ## Getting set up
 
 Use Node.js 24.14.x or 26.x (also enforced by `package.json`).
 
 ```bash
-git clone https://github.com/phenix18/hosris.git
-cd hosris
+git clone https://github.com/phenix18/waguess.git
+cd waguess
 nvm install 24.14.0
 nvm use 24.14.0
 npm install
@@ -117,7 +117,7 @@ The highest-leverage places to jump in:
 
 - **No framework.** Vanilla JS + [CesiumJS](https://cesium.com/platform/cesiumjs/) + [Vite](https://vitejs.dev/).
 - **Assembly lives in `src/app/`; standalone defaults live in `src/standalone/`.** UI controllers live in `src/ui/`, layer factories in `src/layers/`, portable sources in `src/sources/`, and application operations in `src/services/`. Existing `src/ui.js` and `src/data/<layer>.js` entries retain compatibility; new code belongs with its focused owner.
-- Sources acquire records; renderers own Cesium resources. Import `hosris/layers/<family>/source` when only a source factory is needed. Common voice controls consume the session interface; protocol adapters own connection details.
+- Sources acquire records; renderers own Cesium resources. Import `waguess/layers/<family>/source` when only a source factory is needed. Common voice controls consume the session interface; protocol adapters own connection details.
 - **Secrets stay server-side.** Anything needing a private key goes through a local proxy under `server/providers/`. The browser only ever sees the Google Maps key (which you restrict) and ephemeral tokens.
 - `docs/CURRENT-STATE.md` is the authoritative runtime reference — read it first.
 
@@ -156,7 +156,7 @@ ownership and adoption process.
 
 ## Maintainers
 
-HOSRIS is maintained by Fido-Labs ([@phenix18](https://github.com/phenix18)).
+WAGUESS is maintained by Fido-Labs ([@phenix18](https://github.com/phenix18)).
 It is derived from [God's Eye View](https://github.com/bilawalsidhu/gods-eye-view)
 by Bilawal Sidhu (MIT). The maintainer reviews and merges contributions.
 

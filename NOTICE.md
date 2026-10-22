@@ -1,6 +1,6 @@
-# HOSRIS — Notice d'attribution
+# WAGUESS — Notice d'attribution
 
-HOSRIS est une version dérivée de **God's Eye View**, projet open source publié
+WAGUESS est une version dérivée de **God's Eye View**, projet open source publié
 sous licence MIT.
 
 - Projet d'origine : God's Eye View
@@ -8,7 +8,7 @@ sous licence MIT.
 - Dépôt d'origine : <https://github.com/bilawalsidhu/gods-eye-view>
 - Licence d'origine : MIT, Copyright (c) 2026 Bilawal Sidhu
 
-Les modifications apportées par Fido-Labs (renommage en HOSRIS, documentation,
+Les modifications apportées par Fido-Labs (renommage en WAGUESS, documentation,
 adaptations) sont Copyright (c) 2026 Fido-Labs, distribuées sous la même
 licence MIT. Le texte intégral de la licence, avec les deux mentions de
 copyright, se trouve dans le fichier `LICENSE`.

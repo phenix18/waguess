@@ -995,10 +995,10 @@ test('the voice TOOL SCHEMA matches the pinned contract — the mission mapping 
   // list descriptions; the missions still ride existing tools.
   // Street Level and GNSS extend the manifest; broadcast caveats describe tracked and analyst aircraft.
   // Air quality (ECCC AQHI) extends the manifest.
-  assert.equal(block.length, 30631, 'serialized tool schema length drifted');
+  assert.equal(block.length, 30634, 'serialized tool schema length drifted');
   assert.equal(
     crypto.createHash('sha256').update(block).digest('hex'),
-    'a4221ce33cb1c526fd32d1edef371a59a05c5acddef9a937c6b8c903f8e63921',
+    'd549c4374d72296a35b2a1f5322f8910e9117b6c1d56fbdb7437dd56391f79f6',
     'the first-run missions must ride EXISTING tools: no schema edit, no cache bust',
   );
   const instructions = fs.readFileSync(

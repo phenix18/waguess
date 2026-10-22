@@ -298,7 +298,7 @@ test('panel requests cannot reach /mcp through a suffix the server routes to it'
         jsonrpc: '2.0',
         id: 2,
         method: 'resources/read',
-        params: { uri: 'ui://hosris/globe' },
+        params: { uri: 'ui://waguess/globe' },
       })
     ).text,
   );

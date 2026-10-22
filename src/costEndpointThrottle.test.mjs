@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Readable } from 'node:stream';
 import { readPinokioEnvironment } from '../scripts/pinokio-environment.mjs';
-import { openAiRealtimeProxy } from 'hosris/server/providers/openai';
+import { openAiRealtimeProxy } from 'waguess/server/providers/openai';
 import {
   makeCostRateLimiter,
   resolvePerMinuteCap,

@@ -106,7 +106,7 @@ export function adsbLolProxy() {
         }
         const signal = AbortSignal.timeout(UPSTREAM_TIMEOUT_MS);
         const upstream = await fetch('https://api.adsb.lol/v2/mil', {
-          headers: { 'User-Agent': 'hosris-adsblol-proxy/1.0' },
+          headers: { 'User-Agent': 'waguess-adsblol-proxy/1.0' },
           signal,
         });
         if (upstream.ok) {

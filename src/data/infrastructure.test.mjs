@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import * as Cesium from 'cesium';
-import { createInfrastructureLayers } from 'hosris/infrastructure';
-import { createLocalGeoJsonLayer } from 'hosris/infrastructure/geojson';
+import { createInfrastructureLayers } from 'waguess/infrastructure';
+import { createLocalGeoJsonLayer } from 'waguess/infrastructure/geojson';
 
 function services() {
   const records = new Map();
@@ -45,9 +45,9 @@ test('package exports import without an application, DOM, fetch, or timers', () 
     for (const key of ['window', 'document']) {
       delete globalThis[key];
     }
-    await import('hosris/infrastructure');
-    await import('hosris/infrastructure/geojson');
-    await import('hosris/infrastructure/lod');
+    await import('waguess/infrastructure');
+    await import('waguess/infrastructure/geojson');
+    await import('waguess/infrastructure/lod');
   `,
     ],
     { cwd: new URL('../..', import.meta.url), encoding: 'utf8' },
@@ -180,7 +180,7 @@ test('consumer build includes only infrastructure code and resolves assets under
       assetsInlineLimit: 0,
       rollupOptions: {
         input: fileURLToPath(
-          import.meta.resolve('hosris/infrastructure'),
+          import.meta.resolve('waguess/infrastructure'),
         ),
         external: ['cesium'],
         preserveEntrySignatures: 'strict',

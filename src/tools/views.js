@@ -1,5 +1,5 @@
 /**
- * Suggested views: the HOSRIS view that shows a tool's answer, and
+ * Suggested views: the WAGUESS view that shows a tool's answer, and
  * the link that opens it when the app's address is known.
  */
 

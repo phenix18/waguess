@@ -61,7 +61,7 @@ test('Launch Library uses a 15-minute cache and optional server-side token heade
   assert.equal(LL2_CACHE_TTL_MS, 15 * 60_000);
   const headers = {
     Accept: 'application/json',
-    'User-Agent': 'hosris-launch-library-proxy/1.0 (+https://github.com/bilawalsidhu/gods-eye-view)',
+    'User-Agent': 'waguess-launch-library-proxy/1.0 (+https://github.com/bilawalsidhu/gods-eye-view)',
   };
   assert.deepEqual(launchLibraryRequestHeaders(''), headers);
   assert.deepEqual(launchLibraryRequestHeaders(' secret '), {

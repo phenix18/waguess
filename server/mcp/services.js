@@ -1,6 +1,6 @@
 /**
  * Local composition of tool services: Core's default services, pointed at a
- * running HOSRIS server's `/api` routes.
+ * running WAGUESS server's `/api` routes.
  */
 
 import { readFile } from 'node:fs/promises';

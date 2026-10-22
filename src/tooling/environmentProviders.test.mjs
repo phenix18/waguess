@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { promises as fsp } from 'node:fs';
-import { terrainHeightsProxy } from 'hosris/server/providers/terrain';
-import { tomtomProxy } from 'hosris/server/providers/traffic';
-import { firmsProxy } from 'hosris/server/providers/firms';
-import { gbfsProxy } from 'hosris/server/providers/gbfs';
+import { terrainHeightsProxy } from 'waguess/server/providers/terrain';
+import { tomtomProxy } from 'waguess/server/providers/traffic';
+import { firmsProxy } from 'waguess/server/providers/firms';
+import { gbfsProxy } from 'waguess/server/providers/gbfs';
 import { localProviderPlugins } from '../../server/providers/local.js';
 
 function install(plugin, hook = 'configureServer') {

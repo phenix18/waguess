@@ -4,7 +4,7 @@ import { PbfWriter } from 'pbf';
 import {
   mapillaryProxy,
   TILE_ROUTE_MAX_PER_MIN,
-} from 'hosris/server/providers/mapillary';
+} from 'waguess/server/providers/mapillary';
 import { stripTileLayers } from '../../server/providers/mapillary/trim.js';
 import {
   MAX_RETRY_AFTER_SEC,

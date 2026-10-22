@@ -6,11 +6,11 @@ import {
   rocketLaunchesProxy,
   launchLibraryRequestHeaders,
   LL2_CACHE_TTL_MS,
-} from 'hosris/server/providers/space';
+} from 'waguess/server/providers/space';
 import {
   celestrakTleUrl,
   launchLibraryRecentUrl,
-} from 'hosris/sources/space';
+} from 'waguess/sources/space';
 import * as compatibility from '../../server/providers/local.js';
 
 function install(plugin, preview = false) {

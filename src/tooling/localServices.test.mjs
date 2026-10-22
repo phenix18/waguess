@@ -11,14 +11,14 @@ import {
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { overpassProxy } from 'hosris/server/providers/overpass';
-import { militaryInstallationsProxy } from 'hosris/server/providers/military-installations';
+import { overpassProxy } from 'waguess/server/providers/overpass';
+import { militaryInstallationsProxy } from 'waguess/server/providers/military-installations';
 import {
   regionalBriefProxy,
   weatherEffectsProxy,
-} from 'hosris/server/providers/regional';
-import { openAiRealtimeProxy } from 'hosris/server/providers/openai';
-import { keySetupEndpoint } from 'hosris/server/standalone/key-setup';
+} from 'waguess/server/providers/regional';
+import { openAiRealtimeProxy } from 'waguess/server/providers/openai';
+import { keySetupEndpoint } from 'waguess/server/standalone/key-setup';
 import { realtimeInstructions } from '../../server/providers/openai/instructions.js';
 import { GEV_REALTIME_TOOLS } from '../../server/providers/openai/tools.js';
 import { createDebugLogHandler } from '../../server/providers/openai/debug-log.js';
@@ -628,7 +628,7 @@ test('Realtime sessions carry supplied tools, and the standalone voice adds the 
   );
   assert.ok(names.includes('get_weather'));
   assert.ok(names.includes('military_awareness'));
-  assert.ok(!names.includes('show_in_gods_eye_view'));
+  assert.ok(!names.includes('show_in_waguess'));
   assert.ok(!names.includes('aircraft_in_area'));
   assert.ok(!names.includes('get_weather_map'));
   // The action of the same name answers satellite passes.

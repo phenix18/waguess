@@ -32,7 +32,7 @@ const GBFS_HOST_PATH_PREFIXES = new Map([
 const GBFS_HOST_HEADERS = new Map([
   [
     'api.entur.io',
-    Object.freeze({ 'ET-Client-Name': 'hosris-bikeshare' }),
+    Object.freeze({ 'ET-Client-Name': 'waguess-bikeshare' }),
   ],
 ]);
 
